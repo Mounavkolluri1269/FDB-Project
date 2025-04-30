@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Add New Event</h3>
+<form method="post">
+  <div class="mb-3">
+    <label>Event Title</label>
+    <input type="text" name="title" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Description</label>
+    <textarea name="description" class="form-control" required></textarea>
+  </div>
+  <div class="mb-3">
+    <label>Location</label>
+    <input type="text" name="location" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Date</label>
+    <input type="date" name="date" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Price</label>
+    <input type="number" step="0.01" name="price" class="form-control" required>
+  </div>
+  <button class="btn btn-success">Add Event</button>
+</form>
+{% endblock %}

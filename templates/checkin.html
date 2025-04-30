@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container py-5" style="min-height: 90vh;">
+  <div class="row align-items-center">
+
+    <!-- Left Info Section -->
+    <div class="col-md-6 mb-4 mb-md-0">
+      <h1 class="fw-bold text-dark mb-3" style="font-size: 2.8rem;">Event Check-In 🎉</h1>
+      <p class="lead text-muted">
+        Complete your details to confirm your registration and secure your spot. 
+        We look forward to seeing you at the event!
+      </p>
+      <img src="https://images.unsplash.com/photo-1591607920940-0e5c9bb04fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+           alt="Event Check-In"
+           class="img-fluid rounded mt-4 shadow"
+           style="max-height: 400px; object-fit: cover;">
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="col-md-6">
+      <div class="card shadow p-4">
+        <h2 class="text-center mb-4 text-primary fw-bold">Complete Your Check-In</h2>
+
+        <form method="POST">
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="contact" class="form-label">Contact Number</label>
+            <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter your contact number" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="location" class="form-label">Preferred Location</label>
+            <input type="text" class="form-control" id="location" name="location" placeholder="Enter preferred location" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="preferred_date" class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="preferred_date" name="preferred_date" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="guests" class="form-label">Number of Guests</label>
+            <input type="number" class="form-control" id="guests" name="guests" placeholder="Enter number of guests" min="1" required>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Proceed to Payment</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

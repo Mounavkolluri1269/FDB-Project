@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container py-5" style="min-height: 90vh;">
+  <div class="card shadow-lg p-5 mx-auto" style="max-width: 600px;">
+    <h2 class="text-center mb-4 text-primary fw-bold">Check-In Summary</h2>
+
+    <ul class="list-group mb-4">
+      <li class="list-group-item"><b>Full Name:</b> {{ checkin_data.name }}</li>
+      <li class="list-group-item"><b>Email Address:</b> {{ checkin_data.email }}</li>
+      <li class="list-group-item"><b>Contact Number:</b> {{ checkin_data.contact }}</li>
+      <li class="list-group-item"><b>Preferred Location:</b> {{ checkin_data.location }}</li>
+      <li class="list-group-item"><b>Preferred Date:</b> {{ checkin_data.preferred_date }}</li>
+      <li class="list-group-item"><b>Number of Guests:</b> {{ checkin_data.guests }}</li>
+    </ul>
+
+    <form method="POST">
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success btn-lg rounded-pill">Proceed to Payment</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

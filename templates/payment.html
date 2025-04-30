@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Beautiful background section -->
+<div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 100vh; background: linear-gradient(135deg, #e0f7fa, #ffffff);">
+
+  <div class="card shadow-lg p-5" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 20px; max-width: 500px; width: 100%;">
+    
+    <h2 class="text-center text-primary fw-bold mb-4">
+      Complete Your Payment
+    </h2>
+    <h5 class="text-center text-dark mb-4">
+      Payment for: <span class="fw-bold">{{ title }}</span>
+    </h5>
+
+    <form method="post" id="paymentForm">
+      <div class="mb-4">
+        <label for="amount" class="form-label fw-bold">Total Amount ($)</label>
+        <input type="number" name="amount" id="amount" class="form-control form-control-lg rounded-pill" value="{{ total }}" readonly>
+      </div>
+
+      <div class="mb-4">
+        <label for="methodSelect" class="form-label fw-bold">Select Payment Method</label>
+        <select name="method" class="form-select form-select-lg rounded-pill" id="methodSelect" required>
+          <option value="">-- Choose Payment Method --</option>
+          <option value="credit_card">Credit Card</option>
+          <option value="debit_card">Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="cash">Cash</option>
+        </select>
+      </div>
+
+      <div class="d-grid gap-2">
+        <button class="btn btn-gradient btn-lg rounded-pill" type="submit" style="background: linear-gradient(90deg, #00c6ff, #0072ff); color: white;">Submit Payment</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+
+<!-- JavaScript for Payment Method Redirection -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const methodSelect = document.getElementById('methodSelect');
+    methodSelect.addEventListener('change', function() {
+      const method = this.value;
+      if (method === 'credit_card') {
+        window.location.href = '/credit_card_payment/{{ checkin_id }}';
+      } else if (method === 'debit_card') {
+        window.location.href = '/debit_card_payment/{{ checkin_id }}';
+      }
+    });
+  });
+</script>
+
+{% endblock %}

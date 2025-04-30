@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+  .events-section {
+    background: url('https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    padding: 60px 20px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .events-overlay {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .event-card {
+    border-left: 5px solid #0d6efd;
+    border-radius: 12px;
+    background: white;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+
+  .event-card h5 {
+    font-weight: 600;
+  }
+
+  .event-card .btn {
+    border-radius: 30px;
+  }
+</style>
+
+<div class="events-section d-flex justify-content-center align-items-center">
+  <div class="container events-overlay">
+    <h2 class="text-center text-primary fw-bold mb-5">Upcoming Events</h2>
+
+    <div class="row g-4">
+      {% for event in events %}
+      <div class="col-md-6 col-lg-4">
+        <div class="event-card h-100 d-flex flex-column">
+          <h5 class="text-dark mb-2">{{ event.Title }}</h5>
+          <p class="text-muted small mb-2"><strong>Price:</strong> ${{ event.Price }}</p>
+          <p class="text-muted small mb-3">{{ event.Description }}</p>
+          <a href="/checkin/{{ event.EventID }}" class="btn btn-outline-primary mt-auto">Register</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

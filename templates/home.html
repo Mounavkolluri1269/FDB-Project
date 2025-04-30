@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Hero Section -->
+<div class="text-white text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center;">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Welcome to Event Booking Platform</h1>
+    <p class="lead">Crafting unforgettable memories, one event at a time!</p>
+    <a href="/events" class="btn btn-light btn-lg mt-4">Explore Events</a>
+  </div>
+</div>
+
+<!-- About Us Section -->
+<!-- About Us Section -->
+<div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+             class="img-fluid rounded" alt="Team planning event">
+      </div>
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p class="lead">
+          We are passionate about delivering tailored event experiences that leave lasting impressions. From private celebrations to corporate launches, our team blends creativity with precision.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Our Mission Section -->
+<!-- Our Mission Section -->
+<div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Our Mission</h2>
+        <p class="lead">
+          To connect people through world-class events, delivering joy, inspiration, and seamless service. 
+          We aim to redefine event experiences with creativity, passion, and precision.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://t4.ftcdn.net/jpg/00/96/54/53/360_F_96545306_cX6N4Fv2TTVRMKahA3aoCvxlUOGm2KkV.jpg" 
+             class="img-fluid rounded" alt="Mission - Team collaboration">
+      </div>
+    </div>
+  </div>
+  
+<!-- Our Moments Gallery -->
+<!-- Our Moments Gallery -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Our Moments</h2>
+    <div class="row g-4 justify-content-center">
+  
+      <div class="col-md-4 text-center">
+        <img src="https://images.unsplash.com/photo-1600431521340-491eca880813?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+             class="img-fluid rounded shadow" alt="Wedding Bliss"
+             style="height: 300px; object-fit: cover; width: 100%;">
+        <p class="mt-2">An elegant wedding celebration filled with joy and memories.</p>
+      </div>
+  
+      <div class="col-md-4 text-center">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+             class="img-fluid rounded shadow" alt="Corporate Conference"
+             style="height: 300px; object-fit: cover; width: 100%;">
+        <p class="mt-2">A successful corporate event highlighting professionalism and innovation.</p>
+      </div>
+  
+      <div class="col-md-4 text-center">
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+             class="img-fluid rounded shadow" alt="Birthday Bash"
+             style="height: 300px; object-fit: cover; width: 100%;">
+        <p class="mt-2">A vibrant party celebration with music, lights, and happy faces.</p>
+      </div>
+  
+    </div>
+  </div>
+  
+<!-- Reviews Section with Stars -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">What People Say</h2>
+
+  <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active text-center">
+        <blockquote class="blockquote">
+          <p class="mb-3 fst-italic">"EventBooking made our wedding unforgettable! Everything was flawless and stress-free."</p>
+          <div class="mb-2 text-warning">
+            ★ ★ ★ ★ ★
+          </div>
+          <footer class="blockquote-footer">Emily & Jake</footer>
+        </blockquote>
+      </div>
+
+      <div class="carousel-item text-center">
+        <blockquote class="blockquote">
+          <p class="mb-3 fst-italic">"Our corporate seminar went perfectly. The team was professional, efficient, and creative."</p>
+          <div class="mb-2 text-warning">
+            ★ ★ ★ ★ ☆
+          </div>
+          <footer class="blockquote-footer">Michael L., TechCorp</footer>
+        </blockquote>
+      </div>
+
+      <div class="carousel-item text-center">
+        <blockquote class="blockquote">
+          <p class="mb-3 fst-italic">"From music to ambiance, our birthday bash was incredible. Thank you EventBooking!"</p>
+          <div class="mb-2 text-warning">
+            ★ ★ ★ ★ ★
+          </div>
+          <footer class="blockquote-footer">Sophia G.</footer>
+        </blockquote>
+      </div>
+
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container-fluid py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Get In Touch</h2>
+    <p class="lead">Ready to plan your next amazing event? Let's connect!</p>
+    <p><strong>Email:</strong> support@eventbooking.com</p>
+    <p><strong>Phone:</strong> +1 (234) 567-8901</p>
+
+    <div class="mt-4">
+      <a href="/events" class="btn btn-primary">View Events</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

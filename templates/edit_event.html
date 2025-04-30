@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Edit Event Price</h3>
+
+<form method="post">
+  <div class="mb-3">
+    <label for="title" class="form-label">Event Title</label>
+    <input type="text" class="form-control" id="title" value="{{ event.Title }}" readonly>
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">New Price</label>
+    <input type="number" step="0.01" name="price" id="price" class="form-control" value="{{ event.Price }}" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Update Price</button>
+  <a href="/admin" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
